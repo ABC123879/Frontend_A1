@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Task 1: Responsive product showcase card built with HTML, CSS Grid, Flexbox and vanilla JavaScript.">
+  <title>Task 1 | Product Showcase Card</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="component-container">
+
+    <article class="product-card" aria-labelledby="product-title">
+
+      <!-- Left column on desktop / top on mobile -->
+      <figure class="product-media">
+        <span class="badge">Popular</span>
+        <img
+          class="product-img"
+          src="assets/product-mat.svg"
+          alt="Dark desk workspace mat with a keyboard, mouse, notebook and coffee cup"
+          width="600" height="450">
+      </figure>
+
+      <!-- Right column on desktop / bottom on mobile -->
+      <div class="product-details">
+
+        <!-- Row 1: category + rating -->
+        <div class="meta-row">
+          <span class="category">Desk Accessories</span>
+          <span class="rating" aria-label="Rated 4.9 out of 5">4.9 &#9733;</span>
+        </div>
+
+        <!-- Row 2: title, description, feature chips -->
+        <div class="info">
+          <h1 class="title" id="product-title">Desk Workspace Mat</h1>
+          <p class="description">
+            An extra-large, water-resistant desk mat that protects your table
+            and gives your mouse a smooth, silent glide.
+          </p>
+          <ul class="features" aria-label="Product features">
+            <li>Water resistant</li>
+            <li>Non-slip base</li>
+            <li>Vegan leather</li>
+            <li>80 &times; 40 cm</li>
+          </ul>
+        </div>
+
+        <!-- Row 3: price + call to action -->
+        <div class="shelf">
+          <div class="price-box">
+            <span class="price">&#8377;1,499</span>
+            <span class="tax">Tax included</span>
+          </div>
+          <button class="btn" id="add-to-bag" type="button">Add to Bag</button>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Live region: announced by screen readers when the count changes -->
+    <p class="bag-status" role="status" aria-live="polite">
+      Items in bag: <strong id="bag-count">0</strong>
+    </p>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
